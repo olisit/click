@@ -9,11 +9,26 @@ Your browser does not support the HTML5 canvas tag.</canvas>
 <script>
 var c1 = document.getElementById("Canvas1");
 var ct1 = c1.getContext("2d");
+var count=0,cx=0,cy=0
+var start=0
 
+
+setInterval(move,100)
+  
   function handleClick() {
-        alert("The polygon was clicked!");
+        count++
+        start=1
+        cx=50,cy=50
    }
+ 
+  function move(){
+    if (start==0){return}
+    cx++
+    ct1.fillText(" "+count,cx,cy)
+    if(cx>300){start=0}
+  }
 
+  
        
             // Define the path using an SVG path string
    var path = new Path2D("M50 50 L100 50 L120 80 L100 110 L50 110 Z");
