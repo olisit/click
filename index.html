@@ -19,9 +19,11 @@ var ct2 = c2.getContext("2d");
   ct2.fillText("Auto",20,80)
 var count=0,cx=0,cy=0
 var start=0
+var adder=0
 
 
 setInterval(move,100)
+setInterval(add,1000)
   
   function handleClick() {
         count++
@@ -33,11 +35,15 @@ setInterval(move,100)
   function fifty(){
    ct2.fillStyle = "Orange";
    ct2.fillText("Auto",20,80)
-   c2.addEventListener("click", function(event) {if (count>=50){count-=50; setInterval(add,1000)} } )
+  
   }
   
+  c2.addEventListener("click", function(event) {
+    if(count>=50){count-=50; adder++}
+  } )
+  
   function add(){
-     count++
+     count+=adder
     ct1.clearRect(30,110,100,40)
     ct1.fillText(count,30,140)
    }
