@@ -26,7 +26,7 @@ setInterval(move,100)
     if (start==0){return}
   
     ct1.clearRect(cx-1,cy-10,30,20)
-      cx+=3
+      cy-=2
     ct1.fillText(count,cx,cy)
     if(cx>300){start=0}
   }
@@ -34,7 +34,7 @@ setInterval(move,100)
   
        
             // Define the path using an SVG path string
-   var path = new Path2D("M50 50 L100 50 L120 80 L100 110 L50 110 Z");
+   var path = new Path2D("M50 150 L100 170 L120 180 L100 110 L50 100 Z");
 
             // Draw the path on the canvas
    ct1.fillStyle = "green";
