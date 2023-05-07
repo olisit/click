@@ -1,0 +1,20 @@
+<!-- HTML code to include the SVG shape -->
+<html>
+<body>
+<svg width="100" height="100">
+  <polygon id="myPoly" points="10,90 50,10 90,90" fill="#ccc" />
+</svg>
+
+<!-- JavaScript code to make the SVG shape clickable -->
+<script>
+  // Get a reference to the SVG polygon element
+  var poly = document.getElementById("myPoly");
+  
+  // Add a click event listener to the SVG polygon
+  poly.addEventListener("click", function() {
+    // Do something when the SVG polygon is clicked
+    console.log("The SVG polygon was clicked!");
+  });
+</script>
+</body>
+</html>
