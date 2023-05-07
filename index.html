@@ -9,31 +9,35 @@ Your browser does not support the HTML5 canvas tag.</canvas>
 <script>
 var c1 = document.getElementById("Canvas1");
 var ct1 = c1.getContext("2d");
-    function handleClick() {
-            alert("The polygon was clicked!");
-        }
+
+  function handleClick() {
+        alert("The polygon was clicked!");
+   }
 
        
             // Define the path using an SVG path string
-            var path = new Path2D("M50 50 L100 50 L120 80 L100 110 L50 110 Z");
+   var path = new Path2D("M50 50 L100 50 L120 80 L100 110 L50 110 Z");
 
             // Draw the path on the canvas
-            ct1.fillStyle = "green";
-            ct1.fill(path);
+   ct1.fillStyle = "green";
+   ct1.fill(path);
 
             // Add a click event listener to the canvas
-            c1.addEventListener("click", function(event) {
-                var x = event.pageX - canvas.offsetLeft;
-                var y = event.pageY - canvas.offsetTop;
+      c1.addEventListener("click", function(event) {
+         var x = event.pageX - canvas.offsetLeft;
+         var y = event.pageY - canvas.offsetTop;
 
-                // Check if the click was inside the path
-                var isInside = ct1.isPointInPath(path, x, y);
+          // Check if the click was inside the path
+         var isInside = ct1.isPointInPath(path, x, y);
 
-                if (isInside) {
+          if (isInside) {
                     handleClick();
-                }
-            });
-        };
+          }
+         });
+     };
     </script>
+  </body>
+</html>
+  
 </body>
 </html>
