@@ -24,8 +24,8 @@ var ct1 = c1.getContext("2d");
 
             // Add a click event listener to the canvas
  c1.addEventListener("click", function(event) {
-         var x = event.pageX - canvas.offsetLeft;
-         var y = event.pageY - canvas.offsetTop;
+         var x = event.pageX - c1.offsetLeft;
+         var y = event.pageY - c1.offsetTop;
 
           // Check if the click was inside the path
          var isInside = ct1.isPointInPath(path, x, y);
